@@ -1,9 +1,9 @@
 import PropType from "prop-types";
 
-export const Amount = ({ amount }) => {
+export const Amount = ({ amount, show }) => {
   return (
     <div
-      className={`lg:block hidden text-center text-sm bg-darkBrown text-bold text-cream py-2 px-2 rounded-lg`}
+      className={`text-center text-sm bg-darkBrown text-bold text-cream py-2 px-2 rounded-lg hidden ${show}`}
     >
       ${amount}
     </div>

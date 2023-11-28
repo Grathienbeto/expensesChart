@@ -1,6 +1,6 @@
 import PropType from "prop-types";
 
-export const Day = ({ data, bg, handleMouseOver }) => {
+export const Day = ({ data, bg, handleMouseOver, handleMouseLeave }) => {
   const { day, amount } = data;
 
   let height = amount / 5;
@@ -8,7 +8,8 @@ export const Day = ({ data, bg, handleMouseOver }) => {
   return (
     <>
       <div
-        onMouseOver={handleMouseOver}
+        onMouseLeave={() => handleMouseLeave()}
+        onMouseOver={() => handleMouseOver()}
         className={`w-[2rem] lg:w-[3rem] rounded-md ${bg} hover:opacity-75 hover:cursor-pointer`}
         style={{
           height: `${height}rem`,
@@ -23,4 +24,5 @@ Day.propTypes = {
   data: PropType.object,
   bg: PropType.string,
   handleMouseOver: PropType.func,
+  handleMouseLeave: PropType.func,
 };
