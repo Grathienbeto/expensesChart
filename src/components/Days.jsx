@@ -14,7 +14,7 @@ export const Days = ({ data }) => {
   };
 
   return (
-    <div className="flex flex-row justify-between align-bottom items-end pb-3 px-3 bg-paleOrange h-[250px]">
+    <div className="flex flex-row justify-between align-bottom items-end pb-3 px-8 bg-paleOrange h-[250px]">
       {data.map((elem, i) => {
         return (
           <div
