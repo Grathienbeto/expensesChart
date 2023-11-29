@@ -45,8 +45,6 @@ Users should be able to:
 - [Vite](https://vitejs.dev/)
 - [Tailwind](https://tailwindcss.com/) - For styles
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
 ## Author
 
 - Website - [@Grathienbeto](https://github.com/Grathienbeto)
