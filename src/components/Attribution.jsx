@@ -1,6 +1,6 @@
 export const Attribution = () => {
   return (
-    <div className="attribution pt-32 max-w-[80%] mx-auto">
+    <div className="attribution pt-32 max-w-[80%] mx-auto text-center">
       Challenge by{" "}
       <a
         href="https://www.frontendmentor.io?ref=challenge"
@@ -9,7 +9,15 @@ export const Attribution = () => {
       >
         Frontend Mentor
       </a>
-      . Coded by <a href="#">Your Name Here</a>.
+      . Coded by{" "}
+      <a
+        href="https://github.com/Grathienbeto"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Norberto Luna
+      </a>
+      .
     </div>
   );
 };
