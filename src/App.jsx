@@ -9,7 +9,7 @@ import data from "./data.json";
 function App() {
   return (
     <>
-      <div className="max-w-[90%] sm:max-w-[50rem] mx-auto mt-16 font-dmSans">
+      <div className="max-w-[35rem] mx-auto mt-16 font-dmSans">
         <Header />
         <div className="mt-4">
           <Spending />

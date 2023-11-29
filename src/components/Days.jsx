@@ -1,37 +1,33 @@
 import PropType from "prop-types";
 import { Day } from "./Day";
 import { Amount } from "./Amount";
-import { useState } from "react";
 
 export const Days = ({ data }) => {
   let today = new Date().getDay();
 
-  const [show, setShow] = useState("");
-
-  const handleMouseOver = () => {
-    setShow("lg:block");
+  const handleMouseOver = (e) => {
+    e.target.previousElementSibling.classList.add("lg:block");
   };
 
-  const handleMouseLeave = () => {
-    setShow("");
+  const handleMouseLeave = (e) => {
+    e.target.previousElementSibling.classList.remove("lg:block");
   };
 
   return (
-    <div className="flex flex-row justify-between align-bottom items-end p-5 px-5 bg-paleOrange h-[250px]">
+    <div className="flex flex-row justify-between align-bottom items-end pb-3 px-3 bg-paleOrange h-[250px]">
       {data.map((elem, i) => {
         return (
           <div
-            className="flex flex-col text-center gap-2 align-middle items-center"
+            className="flex flex-col text-center gap-3 align-middle items-center w-[10%]"
             key={i}
           >
-            <Amount amount={elem.amount} show={show} />
+            <Amount amount={elem.amount} />
 
             <Day
               data={elem}
               bg={today === i ? "bg-cyan" : "bg-softRed"}
               handleMouseOver={handleMouseOver}
               handleMouseLeave={handleMouseLeave}
-              key={i}
             />
           </div>
         );

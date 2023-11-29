@@ -8,8 +8,8 @@ export const Day = ({ data, bg, handleMouseOver, handleMouseLeave }) => {
   return (
     <>
       <div
-        onMouseLeave={() => handleMouseLeave()}
-        onMouseOver={() => handleMouseOver()}
+        onMouseEnter={handleMouseOver}
+        onMouseLeave={handleMouseLeave}
         className={`w-[2rem] lg:w-[3rem] rounded-md ${bg} hover:opacity-75 hover:cursor-pointer`}
         style={{
           height: `${height}rem`,
